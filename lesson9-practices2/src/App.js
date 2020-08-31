@@ -3,8 +3,22 @@ import './App.css';
 import TaskForm from './components/TaskForm';
 import TaskControl from './components/TaskControl';
 import TaskList from './components/TaskList';
+import data from './data.json'
 
 class App extends Component {
+
+    constructor(){
+        super();
+        this.state = {
+            task : []
+        }
+    }
+
+    onGenerateData = () => {
+        var tasks = data ;
+        console.log(tasks);
+    }
+
     render() {
         return (
             <div className="container mg-50" >
@@ -21,7 +35,20 @@ class App extends Component {
                                 </div>
                                 <div className="col-xs-8 col-sm-8 col-md-8 col-lg-8">
                                     
-                                    <button type="button" className="btn btn-primary"><i className="fas fa-plus"></i>&nbsp; Add task</button>
+                                    <button 
+                                        type="button" 
+                                        className="btn btn-primary">
+                                        <i className="fas fa-plus"></i>
+                                        &nbsp; Add task
+                                    </button>
+                                    &nbsp;
+                                    <button 
+                                        type="button" 
+                                        className="btn btn-danger"
+                                        onClick = {this.onGenerateData}>
+                                        <i className="fas fa-plus"></i>
+                                        &nbsp; Generate Data
+                                    </button>
                                     <br/>
                                     <br/>
                                     <TaskControl/>

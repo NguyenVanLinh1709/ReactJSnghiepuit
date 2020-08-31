@@ -1,0 +1,17 @@
+[
+    {
+        "id" : 1,
+        "name": "learn",
+        "status" : true
+    },
+    {
+        "id" : 2,
+        "name": "play",
+        "status" : true
+    },
+    {
+        "id" : 3,
+        "name": "sleep",
+        "status" : true
+    }
+]
